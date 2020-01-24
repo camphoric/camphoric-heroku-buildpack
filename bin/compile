@@ -9,8 +9,8 @@ CLIENT_PATH="client"
 SERVER_PATH="server"
 echo "-----> Camphoric buildpack"
 
-echo "       Building camphoric client"
-npm run build --prefix $BUILD_DIR/$CLIENT_PATH
+CLIENT_BUILD_DIR="$BUILD_DIR/$CLIENT_PATH"
+yarn run build --prefix $CLIENT_BUILD_DIR
 
 echo "       creating cache: $CACHE_DIR"
 mkdir -p $CACHE_DIR
